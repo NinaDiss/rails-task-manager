@@ -8,8 +8,10 @@
       <br/>
     <% else %>
       <input type="checkbox" name="task" checked>
-      <label for="task"><%= task.title %></label>
+      <label for="task"><%= link_to(task.title, task_path(task)) %></label>
       <br/>
     <% end %>
   <% end %>
 </div>
+
+<%= link_to("Create a new task", tasks_new_path) %>
