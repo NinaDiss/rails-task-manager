@@ -1,17 +1,18 @@
 class TasksController < ApplicationController
-  # before_action(:set_task, only: [:index])
+  before_action(:set_task, only: [:show])
 
   # READ ALL
   def index
     @tasks = Task.all
   end
 
+  # READ ONE
+  def show
+  end
 
+  private
 
-
-  # private
-
-  # def set_task
-  #   @task = Task.find(params[:id])
-  # end
+  def set_task
+    @task = Task.find(params[:id])
+  end
 end
